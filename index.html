@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jayachandra Sarika — Machine Learning Engineer</title>
+<meta name="description" content="Portfolio of Jayachandra Sarika — Machine Learning Engineer specializing in deep learning, generative AI, and scientific data pipelines.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav-wrap">
+  <nav class="nav">
+    <a href="#top" class="nav-logo">JS</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="resume.pdf" class="btn btn-small" download>Resume</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="icon-sun">☀</span><span class="icon-moon">☾</span>
+      </button>
+      <button id="nav-burger" class="nav-burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="hero-eyebrow reveal">Houston, TX</p>
+      <h1 class="hero-title reveal">Hi, I'm Jayachandra Sarika.</h1>
+      <p class="hero-subtitle reveal">
+        I build and fine-tune deep learning &amp; generative AI systems — from
+        3D CNNs on medical scans to LLM-based RAG pipelines — turning messy
+        scientific and unstructured data into models that hold up under evaluation.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">About</h2>
+      <div class="about-grid reveal">
+        <p class="about-text">
+          I'm a Machine Learning practitioner with 2 years of experience building,
+          fine-tuning, and evaluating deep learning and generative AI models across
+          structured and unstructured scientific data. I work primarily in Python
+          with PyTorch and TensorFlow, and I care most about the parts people skip —
+          honest evaluation protocols, class-imbalance handling, and benchmarking
+          that actually reflects the real-world use case, not just a leaderboard number.
+        </p>
+        <div class="about-cards">
+          <div class="about-card">
+            <h3>MS, Computer Science</h3>
+            <p>University of Houston · 2024 – 2026 · GPA 3.92/4.00</p>
+          </div>
+          <div class="about-card">
+            <h3>B.Tech, Computer Science &amp; Engineering</h3>
+            <p>Vellore Institute of Technology · 2020 – 2024 · GPA 3.64/4.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">Projects</h2>
+      <div class="project-grid">
+
+        <article class="project-card reveal">
+          <div class="project-body">
+            <span class="project-tag">Computer Vision</span>
+            <h3>Forest Fire Detection</h3>
+            <p>
+              Two-stage fire &amp; smoke detection system: a MobileNetV2
+              classifier for whole-image fire/no-fire calls, and a YOLOv8
+              detector for real-time bounding boxes on video and webcam
+              streams. Shipped with a Streamlit demo app.
+            </p>
+            <ul class="project-facts">
+              <li>mAP50 0.671 (Fire 0.594 / Smoke 0.749) on D-Fire dataset</li>
+              <li>~11ms/frame inference — real-time on CPU</li>
+              <li>Live webcam + video-file detection modes</li>
+            </ul>
+            <div class="project-tech">
+              <span>Python</span><span>PyTorch</span><span>YOLOv8</span><span>MobileNetV2</span><span>Streamlit</span><span>OpenCV</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/chandusarika/forest-fire-detection" class="link-arrow">GitHub Repo →</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-body">
+            <span class="project-tag">Medical Imaging · 3D CNN</span>
+            <h3>Lung Cancer Detection from CT Scans</h3>
+            <p>
+              End-to-end lung nodule detection pipeline on real LUNA16 CT
+              scans: volumetric preprocessing, self-contained candidate
+              detection, 3D CNN classification, and clinical-standard FROC
+              evaluation.
+            </p>
+            <ul class="project-facts">
+              <li>Test AUC improved 0.83 → 0.96 (custom CNN → MONAI DenseNet121)</li>
+              <li>Precision at ~80% recall: 37% → 73%</li>
+              <li>Handled a ~400:1 class imbalance with weighted loss + augmentation</li>
+            </ul>
+            <div class="project-tech">
+              <span>Python</span><span>MONAI</span><span>SimpleITK</span><span>PyTorch</span><span>LUNA16</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/chandusarika/lung-cancer-ct-detection" class="link-arrow">GitHub Repo →</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-body">
+            <span class="project-tag">Data Visualization</span>
+            <h3>Interactive Population Visualization of Virginia</h3>
+            <p>
+              A data-intensive analytical platform combining geospatial
+              rendering, statistical charting, and a reactive state framework
+              synchronizing interactions across 8 analytical panels.
+            </p>
+            <ul class="project-facts">
+              <li>Modular ETL architecture fusing heterogeneous structured sources</li>
+              <li>K-Means clustering + linear regression for forecasting</li>
+              <li>Synchronized multi-panel dashboards for stakeholder communication</li>
+            </ul>
+            <div class="project-tech">
+              <span>VTK</span><span>Vega-Lite</span><span>Trame</span><span>Apache Spark</span><span>Databricks</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/chandusarika/virginia-population-visualization" class="link-arrow">GitHub Repo →</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-body">
+            <span class="project-tag">NLP</span>
+            <h3>Gender Classification from Blogpost Text</h3>
+            <p>
+              Multi-stage NLP pipeline on 3,232 web-scraped blog records,
+              progressing from lexical baselines to LLM contextual embeddings
+              fine-tuned into a CNN for deep semantic pattern extraction.
+            </p>
+            <ul class="project-facts">
+              <li>TF-IDF/SVM/XGBoost baselines → POS-stratified features → LLM embeddings + CNN</li>
+              <li>PCA for dimensionality reduction on handcrafted linguistic features</li>
+              <li>Significant AUC gains over all lexical baselines</li>
+            </ul>
+            <div class="project-tech">
+              <span>Python</span><span>scikit-learn</span><span>XGBoost</span><span>PyTorch</span><span>NLP</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/chandusarika/gender-classification-blog-text" class="link-arrow">GitHub Repo →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-date">Aug 2025 – May 2026</div>
+          <div class="timeline-body">
+            <h3>Teaching Assistant</h3>
+            <p class="timeline-org">C.T. Bauer College of Business, University of Houston</p>
+            <p>
+              Built and maintained Excel/Python data pipelines tracking KPIs
+              for 1,200+ students; ran root-cause analysis on decision
+              datasets from 100+ student teams and authored reporting tables
+              across 8 fiscal quarters for faculty stakeholders.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-date">Jan 2023 – Jul 2024</div>
+          <div class="timeline-body">
+            <h3>Data Engineer</h3>
+            <p class="timeline-org">BytesEdge Pvt. Ltd., Hyderabad, India</p>
+            <p>
+              Developed and fine-tuned NLP/generative AI models with
+              supervised fine-tuning and contextual embeddings; built
+              LLM-based RAG pipelines and semantic search with LangChain and
+              vector databases; maintained MLOps practices with MLflow,
+              Docker, and Git/GitHub CI/CD.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">Skills</h2>
+      <div class="skills-grid reveal">
+        <div class="skill-group">
+          <h3>Programming &amp; Frameworks</h3>
+          <p>Python (PyTorch, TensorFlow, scikit-learn, Pandas, NumPy), R, SQL, MONAI, SimpleITK</p>
+        </div>
+        <div class="skill-group">
+          <h3>Generative AI &amp; LLMs</h3>
+          <p>LLM Fine-tuning (SFT, RLHF), RAG, Prompt Engineering, LangChain, Vector Databases, Agentic AI</p>
+        </div>
+        <div class="skill-group">
+          <h3>Deep Learning &amp; NLP</h3>
+          <p>Transformers, 2D/3D CNNs, ResNet, DenseNet121, Text Classification, Semantic Search</p>
+        </div>
+        <div class="skill-group">
+          <h3>Scientific &amp; Medical Data</h3>
+          <p>DICOM/CT Volumetric Analysis, Dataset Curation, Evaluation Protocol Design, FROC/AUC-ROC</p>
+        </div>
+        <div class="skill-group">
+          <h3>Data Engineering &amp; MLOps</h3>
+          <p>ETL Pipelines, Apache Spark, MLflow, Docker, Kubernetes, Git/GitHub, CI/CD</p>
+        </div>
+        <div class="skill-group">
+          <h3>Cloud</h3>
+          <p>AWS, Azure, Databricks</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title reveal">Get in Touch</h2>
+      <p class="contact-lead reveal">
+        Open to Machine Learning / Data Engineering roles — always happy to
+        talk about a project or a role that might be a fit.
+      </p>
+      <div class="contact-links reveal">
+        <a href="mailto:jayachandrasarika@gmail.com" class="contact-link">jayachandrasarika@gmail.com</a>
+        <a href="tel:+18326056538" class="contact-link">832-605-6538</a>
+        <a href="http://www.linkedin.com/in/jaya-chandra-sarika-110219268" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/chandusarika" class="contact-link">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; <span id="year"></span> Jayachandra Sarika. Built from scratch with HTML, CSS &amp; JS.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
